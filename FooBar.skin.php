@@ -14,29 +14,19 @@ class SkinFooBar extends SkinTemplate {
 	var $skinname = 'foobar', $stylename = 'FooBar',
 		$template = 'FooBarTemplate', $useHeadElement = true;
 
-	/**
-	 * This function adds JavaScript via ResourceLoader
-	 *
-	 * Use this function if your skin has a JS file or files.
-	 * Otherwise you won't need this function and you can safely delete it.
-	 *
-	 * @param OutputPage $out
-	 */
-	
 	public function initPage( OutputPage $out ) {
-		parent::initPage( $out );
-		$out->addModules( 'skins.foobar.js' );
+		$out->addMeta( 'viewport', 'width=device-width, initial-scale=1.0' );
+		$out->addModuleStyles( array(
+			'mediawiki.skinning.interface',
+			'mediawiki.skinning.content.externallinks',
+			'skins.foobar'
+		) );
+		$out->addModules( array(
+			'skins.foobar.js'
+		) );
 	}
 
-	/**
-	 * Add CSS via ResourceLoader
-	 *
-	 * @param $out OutputPage
-	 */
 	function setupSkinUserCss( OutputPage $out ) {
 		parent::setupSkinUserCss( $out );
-		$out->addModuleStyles( array(
-			'mediawiki.skinning.interface', 'skins.foobar'
-		) );
 	}
 }

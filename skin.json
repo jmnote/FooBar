@@ -1,6 +1,7 @@
 {
-	"name": "Foo Bar", // name as shown under [[Special:Version]]
-	"author": "Daniel Friesen",
+	"name": "Foo Bar",
+	"version": "1.0",
+	"author": "...",
 	"url": "https://www.mediawiki.org/wiki/Skin:FooBar",
 	"descriptionmsg": "foobar-desc",
 	"namemsg": "skinname-foobar",
@@ -10,17 +11,18 @@
 		"foobar": "FooBar"
 	},
 	"AutoloadClasses": {
-		"SkinFooBar": "FooBar.skin.php"
+		"SkinFooBar": "FooBar.skin.php",
+		"FooBarTemplate": "FooBarTemplate.php"
 	},
 	"MessagesDirs": {
 		"FooBar": "i18n"
 	},
 	"ResourceModules": {
 		"skins.foobar": {
-				"styles": {
-						"resources/screen.css": { "media": "screen" },
-						"resources/print.css": { "media": "print" }
-				}
+			"styles": {
+					"resources/screen.css": { "media": "screen" },
+					"resources/print.css": { "media": "print" }
+			}
 		}
 	},
 	"ResourceFileModulePaths": {
