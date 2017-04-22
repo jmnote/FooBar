@@ -1,0 +1,38 @@
+{
+	"name": "Foo Bar", // name as shown under [[Special:Version]]
+	"author": "Daniel Friesen",
+	"url": "https://www.mediawiki.org/wiki/Skin:FooBar",
+	"descriptionmsg": "foobar-desc",
+	"namemsg": "skinname-foobar",
+	"license-name": "GPL-2.0+",
+	"type": "skin",
+	"ValidSkinNames": {
+		"foobar": "FooBar"
+	},
+	"AutoloadClasses": {
+		"SkinFooBar": "FooBar.skin.php"
+	},
+	"MessagesDirs": {
+		"FooBar": "i18n"
+	},
+	"ResourceModules": {
+		"skins.foobar": {
+				"styles": {
+						"resources/screen.css": { "media": "screen" },
+						"resources/print.css": { "media": "print" }
+				}
+		}
+	},
+	"ResourceFileModulePaths": {
+		"localBasePath": "",
+		"remoteSkinPath": "FooBar"
+	},
+	"skins.foobar.js": {
+		"scripts": [
+			"cool.js",
+			"awesome.js"
+		],
+		"position": "top",
+		"dependencies": "jquery.ui.dialog"
+	}
+}
